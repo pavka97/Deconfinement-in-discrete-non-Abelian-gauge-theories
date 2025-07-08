@@ -1,4 +1,5 @@
 # extensions of file not to be tracked
 *.h5
 *.sh
+*.sh.*
 
