@@ -225,7 +225,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
   #maxdim = [Int(i*D_max/i_max) for i in 1:i_max]
   maxdim = D_max
   # Set maximum truncation error allowed when adapting bond dimensions
-  cutoff = [1E-6,1E-9,1E-11,1e-12]
+  cutoff = [1E-6,1E-9,1E-11]
   etol = 1E-6
   #obs = DemoObserver(etol)
 
