@@ -87,7 +87,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
 
   N_C = 18
   
-  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05,0.01]
+  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05]
   
   index_g = findfirst(==(g), list_of_couplings)
 

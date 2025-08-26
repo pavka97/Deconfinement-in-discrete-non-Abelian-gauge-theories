@@ -183,7 +183,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
 
   #N_C = 18
 
-  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05,0.01]
+  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05]
   index_g = findfirst(==(g), list_of_couplings)
 
   for g in list_of_couplings[index_g:end]
@@ -204,15 +204,46 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     sites[N-1] = siteind("charge_0_b",N-1) #lower right boundary
     sites[N] = siteind("charge_0_b",N) #upper right boundary
     
+    gs_file_path = "states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g)*".h5"
+    gs_file_path_gprev = "states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g-1)*".h5"
     
-    if g!=3.
-    
-      f = h5open("states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g-1)*".h5","r")
-    
+    n_minsweeps=20
+    noise = [1E-5,1E-6,1E-7, 1e-9, 1e-11, 0] #noise for the observer
+    if isfile(gs_file_path)
+ 
+      @show(gs_file_path)     
+      f = h5open(gs_file_path,"r")
       sites = read(f,"sites",Vector{Index{Int64}})
-    
+      psi_init = read(f,"psi_ground",MPS)
+      close(f)
+      n_minsweeps=5
+      noise = 0
+    elseif isfile(gs_file_path_gprev)
+      
+      @show(gs_file_path_gprev)     
+      f = h5open(gs_file_path_gprev,"r")
+      sites = read(f,"sites",Vector{Index{Int64}})
+      psi_init = read(f,"psi_ground",MPS)
       close(f)
     
+    else
+      println("Initialize new MPS")
+      # Create an initial random matrix product state
+      #psi0 = randomMPS(sites, D_init)
+      
+      #find ground state of infinite couolng in d4
+      states_init = [2,2]
+      
+      
+      for i in 1:Int(N/2)-2
+        push!(states_init, 13) #add the lower state
+        push!(states_init, 13) #add the upper state
+      end
+      
+      push!(states_init, 2) #add the lower edge state
+      push!(states_init, 2) #add the upper edge state
+      
+      psi_init = productMPS(sites, states_init)
     end
     
     os = get_Hmpo(N,g,penalty)
@@ -229,27 +260,10 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     etol = 1E-6
     #obs = DemoObserver(etol)
     
-    MyObserver = DMRGObserver(;minsweeps = 20, energy_tol = 1E-6)
+    MyObserver = DMRGObserver(;minsweeps =n_minsweeps , energy_tol = etol)
     
     
-    noise = [1E-3,1E-4,1E-5,1E-6,1E-7, 1e-9, 1e-11, 0] #noise for the observer
     
-    # Create an initial random matrix product state
-    #psi0 = randomMPS(sites, D_init)
-    
-    #find ground state of infinite couolng in d4
-    states_init = [2,2]
-    
-    
-    for i in 1:Int(N/2)-2
-      push!(states_init, 13) #add the lower state
-      push!(states_init, 13) #add the upper state
-    end
-    
-    push!(states_init, 2) #add the lower edge state
-    push!(states_init, 2) #add the upper edge state
-    
-    psi_init = productMPS(sites, states_init)
     
     
     
@@ -258,7 +272,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     
     
     
-    
+    #=
     if g!=3.
     
     
@@ -272,6 +286,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
       close(f)
     
     end
+    =#
     
     ff = h5open("states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g)*".h5","w")
     
