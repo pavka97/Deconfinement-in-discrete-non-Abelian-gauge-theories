@@ -183,7 +183,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
 
   #N_C = 18
 
-  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05]
+  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1]
   index_g = findfirst(==(g), list_of_couplings)
 
   for g in list_of_couplings[index_g:end]
@@ -191,7 +191,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     
     #rescale penalty term
     
-    max_val = max(g^2, 1/g^2)
+    max_val = 0.2*max(g^2, 1/g^2)
     
     
     penalty = penalty*max_val
@@ -207,7 +207,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     gs_file_path = "states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g)*".h5"
     gs_file_path_gprev = "states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g-1)*".h5"
     
-    n_minsweeps=20
+    n_minsweeps=10
     noise = [1E-5,1E-6,1E-7, 1e-9, 1e-11, 0] #noise for the observer
     if isfile(gs_file_path)
  
@@ -292,7 +292,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     
     write(ff,"sites",sites)
     
-    
+    println("out states: states_dir/D4_ground_zero_charge_"*string(N)*"_"*string(index_g)*".h5")
     
     
     energy, psi = dmrg(H, psi_init; nsweeps, observer = MyObserver,noise = noise, maxdim, cutoff)

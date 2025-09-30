@@ -1,0 +1,111 @@
+6d5
+< #alpha values for the fields, not used in the code
+9,11c8
+< # const alpha_3 = 10.
+< # const alpha_4 = 10.
+< # const alpha_3 = 0.#<--- make this alpha 5?
+---
+> # const alpha_3 = 0.
+43d39
+< #Local, gauge invariant Hilbert space of the dressed sites. They are different based on the charge and on the position in the lattice. 
+45d40
+< ITensors.space(::SiteType"charge_1") = 8 #charged dressed site
+56c51
+< #edit these loops with the proper number of coner operators
+---
+> #change indices to all loops
+108c103
+<                           ::SiteType"charge_1",
+---
+>                           ::SiteType"charge_0_b",
+111c106
+<         open("corner_operators/corner_u_edge_"*string(nn-1)*"_"*string(i)*"_"*string(j)*".txt") do f 
+---
+>         open("corner_operators/corner_u_edge_0_"*string(nn-1)*"_"*string(i)*"_"*string(j)*".txt") do f 
+184a180
+> 
+187c183
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+190c186
+<   open("constraints/D_R_ul.txt") do f 
+---
+>   open("constraints/D_R_ul_0.txt") do f 
+217c213
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+220c216
+<   open("constraints/D_R_ul.txt") do f 
+---
+>   open("constraints/D_R_ul_0.txt") do f 
+247c243
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+250c246
+<   open("constraints/D_L_ur.txt") do f 
+---
+>   open("constraints/D_L_ur_0.txt") do f 
+277c273
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+280c276
+<   open("constraints/D_L_ur.txt") do f 
+---
+>   open("constraints/D_L_ur_0.txt") do f 
+307c303
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+310c306
+<   open("constraints/D_C_ul.txt") do f 
+---
+>   open("constraints/D_C_ul_0.txt") do f 
+337c333
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+340c336
+<   open("constraints/D_C_ul.txt") do f 
+---
+>   open("constraints/D_C_ul_0.txt") do f 
+367c363
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+370c366
+<   open("constraints/D_C_ur.txt") do f 
+---
+>   open("constraints/D_C_ur_0.txt") do f 
+397c393
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+400c396
+<   open("constraints/D_C_ur.txt") do f 
+---
+>   open("constraints/D_C_ur_0.txt") do f 
+668d663
+< 
+1100c1095
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+1103c1098
+<   open("efields/efield_ul.txt") do f 
+---
+>   open("efields/efield_ul_0.txt") do f 
+1132c1127
+<                      ::SiteType"charge_1",
+---
+>                      ::SiteType"charge_0_b",
+1135c1130
+<   open("efields/efield_ur.txt") do f 
+---
+>   open("efields/efield_ur_0.txt") do f 
+1222,1223d1216
+< 
+< 

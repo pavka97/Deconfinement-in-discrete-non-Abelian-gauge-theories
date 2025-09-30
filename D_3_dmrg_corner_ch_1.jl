@@ -211,10 +211,18 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
   sites[N-1] = siteind("charge_0_b",N-1) #lower right boundary
   sites[N] = siteind("charge_1",N) #upper right boundary
 
+  gs_file_path = "states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5"
+  gs_file_path_gprev = "states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5"
 
-  if g!=3.
+  if isfile(gs_file_path)
+    f = h5open(gs_file_path,"r")
 
-    f = h5open("states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5","r")
+    sites = read(f,"sites",Vector{Index{Int64}})
+
+    close(f)
+  elseif isfile(gs_file_path_gprev)
+
+    f = h5open(gs_file_path_gprev,"r")
 
     sites = read(f,"sites",Vector{Index{Int64}})
 
@@ -231,7 +239,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
 
 
   # Plan to do nsweep DMRG sweeps:
-  nsweeps = 250
+  nsweeps = 100
   # Set maximum MPS bond dimensions for each sweep
   #i_max = Int(D_max/20)
   #maxdim = [Int(i*D_max/i_max) for i in 1:i_max]
@@ -241,8 +249,8 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
   etol = 1E-6
   obs = DemoObserver(etol)
 
-  MyObserver = DMRGObserver(;minsweeps = 20, energy_tol = 1E-6)
-  MyObserver_1 = DMRGObserver(;minsweeps = 20, energy_tol = 1E-6)
+  MyObserver = DMRGObserver(;minsweeps = 10, energy_tol = 1E-5)
+  MyObserver_1 = DMRGObserver(;minsweeps = 10, energy_tol = 1E-5)
 
 
   noise = [1E-3,1E-4,1E-5,1E-6,1E-7, 1e-9, 1e-11, 0] #noise for the observer
@@ -288,14 +296,22 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
   # Run the DMRG algorithm, returning energy and optimized MPS
 
 
+  if isfile(gs_file_path)
+
+    f = h5open(gs_file_path,"r")
 
 
-  if g!=3.
+    psi_string = read(f,"psi_string",MPS)
+    psi_broken = read(f,"psi_broken",MPS)
+
+    close(f)
+
+  elseif isfile(gs_file_path_gprev)
 
 
 
 
-    f = h5open("states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5","r")
+    f = h5open(gs_file_path_gprev,"r")
 
 
     psi_string = read(f,"psi_string",MPS)

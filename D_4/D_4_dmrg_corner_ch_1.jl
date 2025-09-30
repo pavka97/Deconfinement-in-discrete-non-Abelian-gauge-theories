@@ -122,7 +122,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     H = MPO(os, sites)
     
     # Plan to do nsweep DMRG sweeps:
-    nsweeps = 250
+    nsweeps = 150
     # Set maximum MPS bond dimensions for each sweep
     #i_max = Int(D_max/20)
     #maxdim = [Int(i*D_max/i_max) for i in 1:i_max]
@@ -132,8 +132,8 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     etol = 1E-6
     obs = DemoObserver(etol)
     
-    MyObserver = DMRGObserver(;minsweeps = 20, energy_tol = 1E-6)
-    MyObserver_1 = DMRGObserver(;minsweeps = 20, energy_tol = 1E-6)
+    MyObserver = DMRGObserver(;minsweeps = 10, energy_tol = 1E-6)
+    MyObserver_1 = DMRGObserver(;minsweeps = 10, energy_tol = 1E-6)
     
     noise = [1E-3,1E-4,1E-5,1E-6,1E-7, 1e-9, 1e-11, 0] #noise for the observer
     
@@ -152,7 +152,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     
     # Run the DMRG algorithm, returning energy and optimized MPS
     
-    if g!=3.
+    if g!=3. 
     
       f = h5open("states_dir/D4_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5","r")
     
@@ -161,8 +161,9 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
       #psi_broken = read(f,"psi_broken",MPS)
     
       close(f)
-    
+
     end
+
     
     ff = h5open("states_dir/D4_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5","w")
     
