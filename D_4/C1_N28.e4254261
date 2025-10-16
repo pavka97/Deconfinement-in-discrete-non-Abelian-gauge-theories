@@ -1,7 +1,0 @@
-=>> PBS: job killed: walltime 259251 exceeded limit 259200
-
-signal (15): Terminated
-in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:248
-mkl_blas_avx2_zgemm_kernel_0 at /home/matteo.wauters/.julia/artifacts/be271e9c6341c97e67428ba9cad4f0a6b87d2993/lib/libmkl_avx2.so.2 (unknown line)
-unknown function (ip: (nil))
-Allocations: 409826483 (Pool: 409711479; Big: 115004); GC: 3257
