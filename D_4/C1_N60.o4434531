@@ -1,0 +1,15 @@
+code started. N=60
+g = 0.6
+index_g = 8
+After sweep 1 energy=-86.59322014120335  maxlinkdim=50 maxerr=1.02E-03 time=2288.457
+After sweep 2 energy=-87.80331458889728  maxlinkdim=74 maxerr=9.98E-08 time=1812.897
+After sweep 3 energy=-87.8120773055163  maxlinkdim=100 maxerr=3.19E-08 time=4819.453
+After sweep 4 energy=-87.81223753394036  maxlinkdim=150 maxerr=1.14E-09 time=12596.118
+After sweep 5 energy=-87.81224213040888  maxlinkdim=200 maxerr=9.78E-11 time=18019.299
+After sweep 6 energy=-87.81224226075966  maxlinkdim=200 maxerr=6.02E-11 time=22411.068
+After sweep 7 energy=-87.81224226247315  maxlinkdim=200 maxerr=2.81E-11 time=22007.015
+After sweep 8 energy=-87.81224226240275  maxlinkdim=200 maxerr=2.78E-11 time=20238.785
+After sweep 9 energy=-87.81224226205958  maxlinkdim=200 maxerr=2.76E-11 time=31401.879
+After sweep 10 energy=-87.81224226162716  maxlinkdim=200 maxerr=2.76E-11 time=18351.673
+After sweep 11 energy=-87.81224226130442  maxlinkdim=200 maxerr=2.74E-11 time=19345.597
+Energy difference less than 1.0e-5, stopping DMRG

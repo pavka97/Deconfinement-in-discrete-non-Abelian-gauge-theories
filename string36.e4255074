@@ -1,0 +1,53 @@
+
+signal (15): Terminated
+in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:3
+__xstat64 at /lib64/libc.so.6 (unknown line)
+uv__fs_stat at /workspace/srcdir/libuv/src/unix/fs.c:1660
+uv__fs_work at /workspace/srcdir/libuv/src/unix/fs.c:1807
+uv_fs_stat at /workspace/srcdir/libuv/src/unix/fs.c:2202
+jl_stat at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/sys.c:122
+stat at ./stat.jl:150
+ispath at ./stat.jl:456 [inlined]
+explicit_manifest_entry_path at ./loading.jl:705
+explicit_manifest_uuid_path at ./loading.jl:685
+manifest_uuid_path at ./loading.jl:491
+locate_package at ./loading.jl:351
+#stale_cachefile#909 at ./loading.jl:2107
+stale_cachefile at ./loading.jl:2065 [inlined]
+_require_search_from_serialized at ./loading.jl:987
+_require at ./loading.jl:1315
+_require_prelocked at ./loading.jl:1200
+macro expansion at ./loading.jl:1180 [inlined]
+macro expansion at ./lock.jl:223 [inlined]
+require at ./loading.jl:1144
+unknown function (ip: 0x2ad1b04b0216)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+jl_apply at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/julia.h:1839 [inlined]
+call_require at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:462 [inlined]
+eval_import_path at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:499
+jl_toplevel_eval_flex at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:725
+jl_toplevel_eval_flex at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:850
+ijl_toplevel_eval_in at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:965
+eval at ./boot.jl:368 [inlined]
+include_string at ./loading.jl:1428
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+_include at ./loading.jl:1488
+include at ./Base.jl:419
+jfptr_include_55781.clone_1 at /apps/julia-1.8.2/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+exec_options at ./client.jl:303
+_start at ./client.jl:522
+jfptr__start_56736.clone_1 at /apps/julia-1.8.2/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+jl_apply at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/julia.h:1839 [inlined]
+true_main at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/jlapi.c:575
+jl_repl_entrypoint at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/jlapi.c:719
+main at julia (unknown line)
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+unknown function (ip: 0x401098)
+unknown function (ip: (nil))
+Allocations: 26631864 (Pool: 26627260; Big: 4604); GC: 10

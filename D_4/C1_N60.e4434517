@@ -1,0 +1,23 @@
+ERROR: LoadError: HDF5.API.H5Error: Error opening group //psi_string
+libhdf5 Stacktrace:
+  [1] H5G__loc_find_cb: Symbol table/Object not found
+      object 'psi_string' doesn't exist
+   ⋮
+Stacktrace:
+ [1] macro expansion
+   @ ~/.julia/packages/HDF5/Z859u/src/api/error.jl:18 [inlined]
+ [2] h5g_open(loc_id::HDF5.File, pathname::String, gapl_id::HDF5.GroupAccessProperties)
+   @ HDF5.API ~/.julia/packages/HDF5/Z859u/src/api/functions.jl:1872
+ [3] open_group
+   @ ~/.julia/packages/HDF5/Z859u/src/groups.jl:63 [inlined]
+ [4] open_group(parent::HDF5.File, name::String; pv::Base.Pairs{Symbol, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+   @ HDF5 ~/.julia/packages/HDF5/Z859u/src/groups.jl:67
+ [5] open_group
+   @ ~/.julia/packages/HDF5/Z859u/src/groups.jl:65 [inlined]
+ [6] read(parent::HDF5.File, name::String, #unused#::Type{MPS})
+   @ ITensors.ITensorsHDF5Ext ~/.julia/packages/ITensors/kHYfQ/ext/ITensorsHDF5Ext/ITensorMPS/mps.jl:19
+ [7] main(N::Int64, g::Float64, penalty::Float64, D_max::Int64)
+   @ Main ~/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:167
+ [8] top-level scope
+   @ ~/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:248
+in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:248

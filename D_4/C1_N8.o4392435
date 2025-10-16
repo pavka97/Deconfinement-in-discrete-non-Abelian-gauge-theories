@@ -1,0 +1,8 @@
+code started. N=36
+g = 0.7
+index_g = 7
+After sweep 1 energy=-37.05246888765408  maxlinkdim=100 maxerr=1.00E-06 time=16861.467
+After sweep 2 energy=-37.054167368060256  maxlinkdim=168 maxerr=9.47E-09 time=38612.199
+After sweep 3 energy=-37.05417132701193  maxlinkdim=200 maxerr=1.08E-09 time=62590.201
+After sweep 4 energy=-37.054171342857664  maxlinkdim=200 maxerr=1.36E-10 time=73278.451
+After sweep 5 energy=-37.05417134344014  maxlinkdim=189 maxerr=2.52E-11 time=61772.914

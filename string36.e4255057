@@ -1,0 +1,42 @@
+ERROR: LoadError: HDF5.API.H5Error: Error opening file states_dir/D3_ground_and_excited_88_5.h5
+libhdf5 Stacktrace:
+  [1] H5O__prefix_deserialize: Object header/Wrong version number
+      bad object header version number
+   ⋮
+Stacktrace:
+ [1] macro expansion
+   @ ~/.julia/packages/HDF5/Z859u/src/api/error.jl:18 [inlined]
+ [2] h5f_open(pathname::String, flags::UInt16, fapl_id::HDF5.FileAccessProperties)
+   @ HDF5.API ~/.julia/packages/HDF5/Z859u/src/api/functions.jl:1584
+ [3] h5open(filename::String, mode::String, fapl::HDF5.FileAccessProperties, fcpl::HDF5.FileCreateProperties; swmr::Bool)
+   @ HDF5 ~/.julia/packages/HDF5/Z859u/src/file.jl:58
+ [4] h5open(filename::String, mode::String; swmr::Bool, fapl::HDF5.FileAccessProperties, fcpl::HDF5.FileCreateProperties, pv::Base.Pairs{Symbol, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+   @ HDF5 ~/.julia/packages/HDF5/Z859u/src/file.jl:75
+ [5] h5open
+   @ ~/.julia/packages/HDF5/Z859u/src/file.jl:63 [inlined]
+ [6] main(N::Int64, g::Float64, penalty::Float64, D_max::Int64)
+   @ Main ~/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:218
+ [7] top-level scope
+   @ ~/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:436
+in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:436
+ERROR: LoadError: HDF5.API.H5Error: Error opening file states_dir/D3_ground_and_excited_88_5.h5
+libhdf5 Stacktrace:
+  [1] H5O__prefix_deserialize: Object header/Wrong version number
+      bad object header version number
+   ⋮
+Stacktrace:
+ [1] macro expansion
+   @ ~/.julia/packages/HDF5/Z859u/src/api/error.jl:18 [inlined]
+ [2] h5f_open(pathname::String, flags::UInt16, fapl_id::HDF5.FileAccessProperties)
+   @ HDF5.API ~/.julia/packages/HDF5/Z859u/src/api/functions.jl:1584
+ [3] h5open(filename::String, mode::String, fapl::HDF5.FileAccessProperties, fcpl::HDF5.FileCreateProperties; swmr::Bool)
+   @ HDF5 ~/.julia/packages/HDF5/Z859u/src/file.jl:58
+ [4] h5open(filename::String, mode::String; swmr::Bool, fapl::HDF5.FileAccessProperties, fcpl::HDF5.FileCreateProperties, pv::Base.Pairs{Symbol, Union{}, Tuple{}, NamedTuple{(), Tuple{}}})
+   @ HDF5 ~/.julia/packages/HDF5/Z859u/src/file.jl:75
+ [5] h5open
+   @ ~/.julia/packages/HDF5/Z859u/src/file.jl:63 [inlined]
+ [6] main(N::Int64, g::Float64, penalty::Float64, D_max::Int64)
+   @ Main ~/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:225
+ [7] top-level scope
+   @ ~/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:436
+in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_3_dmrg_corner_ch_1.jl:436

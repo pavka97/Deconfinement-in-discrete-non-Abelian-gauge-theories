@@ -1,0 +1,51 @@
+
+signal (15): Terminated
+in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:3
+forall_exists_subtype at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/subtype.c:1413
+ijl_subtype_env at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/subtype.c:1881
+ijl_type_morespecific at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/subtype.c:3975
+ml_matches at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:3107
+ijl_matching_methods at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:1953
+jl_verify_edges at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/dump.c:2349 [inlined]
+jl_insert_backedges at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/dump.c:2391 [inlined]
+_jl_restore_incremental at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/dump.c:3123
+ijl_restore_incremental at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/dump.c:3173
+_include_from_serialized at ./loading.jl:807
+_tryrequire_from_serialized at ./loading.jl:938
+_require_search_from_serialized at ./loading.jl:1028
+_require at ./loading.jl:1315
+_require_prelocked at ./loading.jl:1200
+macro expansion at ./loading.jl:1180 [inlined]
+macro expansion at ./lock.jl:223 [inlined]
+require at ./loading.jl:1144
+unknown function (ip: 0x2b9b6195a216)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+jl_apply at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/julia.h:1839 [inlined]
+call_require at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:462 [inlined]
+eval_import_path at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:499
+jl_toplevel_eval_flex at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:725
+jl_toplevel_eval_flex at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:850
+ijl_toplevel_eval_in at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:965
+eval at ./boot.jl:368 [inlined]
+include_string at ./loading.jl:1428
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+_include at ./loading.jl:1488
+include at ./Base.jl:419
+jfptr_include_55781.clone_1 at /apps/julia-1.8.2/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+exec_options at ./client.jl:303
+_start at ./client.jl:522
+jfptr__start_56736.clone_1 at /apps/julia-1.8.2/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+jl_apply at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/julia.h:1839 [inlined]
+true_main at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/jlapi.c:575
+jl_repl_entrypoint at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/jlapi.c:719
+main at julia (unknown line)
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+unknown function (ip: 0x401098)
+unknown function (ip: (nil))
+Allocations: 35882794 (Pool: 35877354; Big: 5440); GC: 13

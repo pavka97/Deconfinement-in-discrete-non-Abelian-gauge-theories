@@ -26,7 +26,7 @@ function get_Hmpo(N::Int64, g::Float64, penalty::Float64)
 
   for nn in 1:Int(N/2)-1
 
-    for (i, j, k, l) in Iterators.product(0:2, 0:2, 0:2, 0:2)
+    for (i, j, k, l) in Iterators.product(0:3, 0:3, 0:3, 0:3)
 
       i_c = liste[i+1]
       j_c = liste[j+1]
@@ -83,15 +83,21 @@ function get_Hmpo(N::Int64, g::Float64, penalty::Float64)
   return os 
 end
 
+
+
+
+
+
 function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
 
+  println("code started. N=",N)
   N_C = 18
   
-  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1,0.05]
+  list_of_couplings = [3.,2.,1.5,1.,0.9,0.8,0.7,0.6,0.5,0.4,0.3,0.2,0.1]
   
   index_g = findfirst(==(g), list_of_couplings)
 
-  for g in list_of_couplings[index_g:end]
+  for g in list_of_couplings[index_g]
     
     #rescale penalty term
     
@@ -111,6 +117,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     if g!=3.
     
       f = h5open("states_dir/D4_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5","r")
+      #f = h5open("states_dir/D4_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5","r")
     
       sites = read(f,"sites",Vector{Index{Int64}})
     
@@ -126,16 +133,16 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     # Set maximum MPS bond dimensions for each sweep
     #i_max = Int(D_max/20)
     #maxdim = [Int(i*D_max/i_max) for i in 1:i_max]
-    maxdim = D_max
+    maxdim = [50, 100, 100, 150, D_max]
     # Set maximum truncation error allowed when adapting bond dimensions
-    cutoff = [1E-6,1E-9,1E-11]
-    etol = 1E-6
+    cutoff = [1E-5,1E-7,1E-9,1E-11]
+    etol = 1E-5
     obs = DemoObserver(etol)
     
-    MyObserver = DMRGObserver(;minsweeps = 10, energy_tol = 1E-6)
-    MyObserver_1 = DMRGObserver(;minsweeps = 10, energy_tol = 1E-6)
+    MyObserver = DMRGObserver(;minsweeps = 10, energy_tol = etol)
+    MyObserver_1 = DMRGObserver(;minsweeps = 10, energy_tol = etol)
     
-    noise = [1E-3,1E-4,1E-5,1E-6,1E-7, 1e-9, 1e-11, 0] #noise for the observer
+    noise = [1E-5,1E-7, 1e-9, 1e-11, 0] #noise for the observer
     
     states_string = [2,1] 
     
@@ -165,13 +172,13 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
     end
 
     
-    ff = h5open("states_dir/D4_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5","w")
-    
-    write(ff,"sites",sites)
     
     # if N <= N_C
     
     energy, psi = dmrg(H, psi_string; nsweeps, observer = MyObserver,noise = noise, maxdim, cutoff)
+    ff = h5open("states_dir/D4_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5","w")
+    
+    write(ff,"sites",sites)
     write(ff,"psi_string",psi)
     close(ff)
     

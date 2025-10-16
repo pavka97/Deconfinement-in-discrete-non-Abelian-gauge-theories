@@ -1,0 +1,37 @@
+code started. N=48
+g = 1.5
+index_g = 3
+After sweep 1 energy=-106.1185297983149  maxlinkdim=17 maxerr=9.98E-07 time=237.977
+After sweep 2 energy=-106.11910721346806  maxlinkdim=40 maxerr=9.96E-10 time=768.269
+After sweep 3 energy=-106.11910835756679  maxlinkdim=55 maxerr=9.98E-12 time=2086.059
+After sweep 4 energy=-106.11910836331704  maxlinkdim=51 maxerr=9.05E-12 time=3204.758
+After sweep 5 energy=-106.11910837165811  maxlinkdim=50 maxerr=9.96E-12 time=2843.646
+After sweep 6 energy=-106.11910835182238  maxlinkdim=41 maxerr=9.99E-12 time=1256.770
+After sweep 7 energy=-106.11910835007313  maxlinkdim=41 maxerr=9.98E-12 time=657.696
+After sweep 8 energy=-106.11910834975686  maxlinkdim=41 maxerr=9.99E-12 time=1948.748
+After sweep 9 energy=-106.11910834951226  maxlinkdim=41 maxerr=9.96E-12 time=1882.845
+After sweep 10 energy=-106.1191083494424  maxlinkdim=41 maxerr=9.70E-12 time=1039.794
+After sweep 11 energy=-106.11910834928278  maxlinkdim=41 maxerr=9.98E-12 time=1177.557
+Energy difference less than 1.0e-6, stopping DMRG
+code started. N=48
+g = 1.0
+index_g = 4
+After sweep 1 energy=-51.29581898784291  maxlinkdim=60 maxerr=1.00E-06 time=8578.749
+After sweep 2 energy=-51.29689430948492  maxlinkdim=139 maxerr=9.99E-10 time=20173.468
+After sweep 3 energy=-51.296901510783435  maxlinkdim=200 maxerr=2.07E-11 time=18596.240
+After sweep 4 energy=-51.29690184879657  maxlinkdim=189 maxerr=1.00E-11 time=13020.652
+After sweep 5 energy=-51.296901873780435  maxlinkdim=173 maxerr=9.99E-12 time=10236.122
+After sweep 6 energy=-51.29690187044105  maxlinkdim=153 maxerr=9.98E-12 time=7731.818
+After sweep 7 energy=-51.2969018701348  maxlinkdim=151 maxerr=1.00E-11 time=7267.099
+After sweep 8 energy=-51.29690187023772  maxlinkdim=151 maxerr=9.99E-12 time=6847.905
+After sweep 9 energy=-51.29690187031416  maxlinkdim=151 maxerr=9.99E-12 time=12039.476
+After sweep 10 energy=-51.296901870421586  maxlinkdim=151 maxerr=9.96E-12 time=13082.999
+code started. N=48
+g = 0.7
+index_g = 7
+code started. N=48
+g = 0.6
+index_g = 8
+code started. N=48
+g = 0.2
+index_g = 12

@@ -1,0 +1,91 @@
+=>> PBS: job killed: walltime 259217 exceeded limit 259200
+
+signal (15): Terminated
+in expression starting at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:248
+futex_wait at /workspace/srcdir/gcc-11.1.0/libgomp/config/linux/x86/futex.h:97 [inlined]
+do_wait at /workspace/srcdir/gcc-11.1.0/libgomp/config/linux/wait.h:67 [inlined]
+gomp_team_barrier_wait_end at /workspace/srcdir/gcc-11.1.0/libgomp/config/linux/bar.c:112
+gomp_team_end at /workspace/srcdir/gcc-11.1.0/libgomp/team.c:943
+mkl_lapack_zlatrd at /home/matteo.wauters/.julia/artifacts/be271e9c6341c97e67428ba9cad4f0a6b87d2993/lib/libmkl_gnu_thread.so.2 (unknown line)
+mkl_lapack_zhetrd at /home/matteo.wauters/.julia/artifacts/be271e9c6341c97e67428ba9cad4f0a6b87d2993/lib/libmkl_gnu_thread.so.2 (unknown line)
+mkl_lapack_zheevr at /home/matteo.wauters/.julia/artifacts/be271e9c6341c97e67428ba9cad4f0a6b87d2993/lib/libmkl_core.so (unknown line)
+mkl_lapack__zheevr_64_ at /home/matteo.wauters/.julia/artifacts/be271e9c6341c97e67428ba9cad4f0a6b87d2993/lib/libmkl_intel_lp64.so.2 (unknown line)
+mkl_lapack__zheevr_64_ at /home/matteo.wauters/.julia/artifacts/be271e9c6341c97e67428ba9cad4f0a6b87d2993/lib/libmkl_rt.so (unknown line)
+syevr! at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/usr/share/julia/stdlib/v1.8/LinearAlgebra/src/lapack.jl:5254
+#eigen!#209 at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/usr/share/julia/stdlib/v1.8/LinearAlgebra/src/symmetriceigen.jl:4 [inlined]
+eigen!##kw at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/usr/share/julia/stdlib/v1.8/LinearAlgebra/src/symmetriceigen.jl:4 [inlined]
+#eigen#210 at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/usr/share/julia/stdlib/v1.8/LinearAlgebra/src/symmetriceigen.jl:10 [inlined]
+eigen at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/usr/share/julia/stdlib/v1.8/LinearAlgebra/src/symmetriceigen.jl:7 [inlined]
+eigen at /home/matteo.wauters/.julia/packages/NDTensors/h1tIi/src/lib/Expose/src/functions/linearalgebra.jl:24 [inlined]
+#eigen#97 at /home/matteo.wauters/.julia/packages/NDTensors/h1tIi/src/linearalgebra/linearalgebra.jl:178
+eigen##kw at /home/matteo.wauters/.julia/packages/NDTensors/h1tIi/src/linearalgebra/linearalgebra.jl:157
+unknown function (ip: 0x2b02aa2ff238)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+#eigen#293 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/tensor_operations/matrix_decomposition.jl:378
+eigen##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/tensor_operations/matrix_decomposition.jl:291
+unknown function (ip: 0x2b02aa2f6463)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+#factorize_eigen#320 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/tensor_operations/matrix_decomposition.jl:680
+factorize_eigen##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/tensor_operations/matrix_decomposition.jl:651
+unknown function (ip: 0x2b02a87828ef)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+#factorize#322 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/tensor_operations/matrix_decomposition.jl:828
+factorize##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/tensor_operations/matrix_decomposition.jl:746
+unknown function (ip: 0x2b02a878188f)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+#replacebond!#407 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/mps.jl:563
+replacebond!##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/mps.jl:534 [inlined]
+#replacebond!#409 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/mps.jl:610 [inlined]
+replacebond!##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/mps.jl:609
+unknown function (ip: 0x2b02aa2d7ae4)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+macro expansion at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:279 [inlined]
+macro expansion at /home/matteo.wauters/.julia/packages/TimerOutputs/Lw5SP/src/TimerOutput.jl:253 [inlined]
+macro expansion at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:278 [inlined]
+macro expansion at ./timing.jl:382 [inlined]
+#dmrg#512 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:206
+dmrg##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:158 [inlined]
+#dmrg#509 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:28 [inlined]
+dmrg##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:21 [inlined]
+#dmrg#515 at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:388 [inlined]
+dmrg##kw at /home/matteo.wauters/.julia/packages/ITensors/kHYfQ/src/lib/ITensorMPS/src/dmrg.jl:378 [inlined]
+main at /home/matteo.wauters/LGT/D3_plaquette/Deconfinement-in-discrete-non-Abelian-gauge-theories/D_4/D_4_dmrg_corner_ch_1.jl:178
+unknown function (ip: 0x2b02471fd23c)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+jl_apply at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/julia.h:1839 [inlined]
+do_call at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/interpreter.c:126
+eval_value at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/interpreter.c:215
+eval_stmt_value at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/interpreter.c:166 [inlined]
+eval_body at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/interpreter.c:612
+jl_interpret_toplevel_thunk at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/interpreter.c:750
+jl_toplevel_eval_flex at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:906
+jl_toplevel_eval_flex at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:850
+ijl_toplevel_eval_in at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/toplevel.c:965
+eval at ./boot.jl:368 [inlined]
+include_string at ./loading.jl:1428
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+_include at ./loading.jl:1488
+include at ./Base.jl:419
+jfptr_include_55781.clone_1 at /apps/julia-1.8.2/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+exec_options at ./client.jl:303
+_start at ./client.jl:522
+jfptr__start_56736.clone_1 at /apps/julia-1.8.2/lib/julia/sys.so (unknown line)
+_jl_invoke at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2367 [inlined]
+ijl_apply_generic at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/gf.c:2549
+jl_apply at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/julia.h:1839 [inlined]
+true_main at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/jlapi.c:575
+jl_repl_entrypoint at /cache/build/default-amdci4-6/julialang/julia-release-1-dot-8/src/jlapi.c:719
+main at julia (unknown line)
+__libc_start_main at /lib64/libc.so.6 (unknown line)
+unknown function (ip: 0x401098)
+unknown function (ip: (nil))
+Allocations: 409928857 (Pool: 409813706; Big: 115151); GC: 3564

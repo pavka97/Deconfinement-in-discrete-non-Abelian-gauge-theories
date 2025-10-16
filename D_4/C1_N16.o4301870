@@ -1,0 +1,75 @@
+code started. N=16
+g = 0.5
+index_g = 9
+After sweep 1 energy=-39.03403677311485  maxlinkdim=106 maxerr=6.21E-06 time=2704.779
+After sweep 2 energy=-39.052294641818946  maxlinkdim=200 maxerr=9.94E-07 time=3116.490
+After sweep 3 energy=-39.05337469478352  maxlinkdim=200 maxerr=1.13E-07 time=4028.349
+After sweep 4 energy=-39.05353033356151  maxlinkdim=200 maxerr=1.14E-08 time=3838.980
+After sweep 5 energy=-39.053550344980785  maxlinkdim=200 maxerr=2.24E-09 time=3833.599
+After sweep 6 energy=-39.05355043129621  maxlinkdim=200 maxerr=1.78E-10 time=3637.442
+After sweep 7 energy=-39.05355043196222  maxlinkdim=200 maxerr=5.39E-11 time=3576.797
+After sweep 8 energy=-39.053550431890116  maxlinkdim=200 maxerr=5.20E-11 time=2682.015
+After sweep 9 energy=-39.05355043180355  maxlinkdim=200 maxerr=5.29E-11 time=2680.752
+After sweep 10 energy=-39.053550431735594  maxlinkdim=200 maxerr=4.90E-11 time=2652.078
+After sweep 11 energy=-39.0535504316477  maxlinkdim=200 maxerr=4.76E-11 time=2711.917
+Energy difference less than 1.0e-6, stopping DMRG
+code started. N=16
+g = 0.4
+index_g = 10
+After sweep 1 energy=-75.40070455608732  maxlinkdim=100 maxerr=2.54E-06 time=2245.314
+After sweep 2 energy=-75.40433777820166  maxlinkdim=200 maxerr=3.60E-07 time=2521.115
+After sweep 3 energy=-75.40433824285455  maxlinkdim=200 maxerr=7.49E-08 time=3559.788
+After sweep 4 energy=-75.40433824524537  maxlinkdim=200 maxerr=8.53E-09 time=3595.508
+After sweep 5 energy=-75.40433824525523  maxlinkdim=132 maxerr=8.68E-10 time=2910.824
+After sweep 6 energy=-75.40433824494428  maxlinkdim=105 maxerr=1.10E-11 time=2297.439
+After sweep 7 energy=-75.40433824407808  maxlinkdim=91 maxerr=9.98E-12 time=990.012
+After sweep 8 energy=-75.40433824388677  maxlinkdim=88 maxerr=9.83E-12 time=705.792
+After sweep 9 energy=-75.40433824374074  maxlinkdim=87 maxerr=9.93E-12 time=713.704
+After sweep 10 energy=-75.40433824354787  maxlinkdim=87 maxerr=9.93E-12 time=690.239
+After sweep 11 energy=-75.40433824341301  maxlinkdim=87 maxerr=9.84E-12 time=670.238
+Energy difference less than 1.0e-6, stopping DMRG
+code started. N=16
+g = 0.3
+index_g = 11
+After sweep 1 energy=-148.4874082550426  maxlinkdim=52 maxerr=9.98E-07 time=569.642
+After sweep 2 energy=-148.48835647955514  maxlinkdim=104 maxerr=6.58E-08 time=1406.671
+After sweep 3 energy=-148.48835710565822  maxlinkdim=200 maxerr=2.23E-08 time=2731.258
+After sweep 4 energy=-148.48835710860516  maxlinkdim=104 maxerr=3.17E-09 time=2282.948
+After sweep 5 energy=-148.48835710855815  maxlinkdim=104 maxerr=3.31E-10 time=1721.818
+After sweep 6 energy=-148.48835710815467  maxlinkdim=91 maxerr=9.98E-12 time=958.312
+After sweep 7 energy=-148.48835710725888  maxlinkdim=52 maxerr=9.83E-12 time=404.371
+After sweep 8 energy=-148.48835710754128  maxlinkdim=52 maxerr=9.99E-12 time=275.145
+After sweep 9 energy=-148.48835710692381  maxlinkdim=52 maxerr=9.92E-12 time=272.932
+After sweep 10 energy=-148.48835710690855  maxlinkdim=52 maxerr=9.98E-12 time=258.387
+After sweep 11 energy=-148.48835710674925  maxlinkdim=52 maxerr=1.00E-11 time=278.258
+Energy difference less than 1.0e-6, stopping DMRG
+code started. N=16
+g = 0.2
+index_g = 12
+After sweep 1 energy=-346.8193306011142  maxlinkdim=52 maxerr=8.13E-07 time=266.244
+After sweep 2 energy=-346.81943578907305  maxlinkdim=103 maxerr=2.81E-09 time=1234.520
+After sweep 3 energy=-346.8194543890012  maxlinkdim=104 maxerr=2.16E-09 time=1576.119
+After sweep 4 energy=-346.8194543897596  maxlinkdim=104 maxerr=5.59E-10 time=1743.425
+After sweep 5 energy=-346.8194543897629  maxlinkdim=104 maxerr=6.82E-11 time=1858.652
+After sweep 6 energy=-346.8194543888666  maxlinkdim=52 maxerr=9.77E-12 time=441.808
+After sweep 7 energy=-346.81945438874743  maxlinkdim=52 maxerr=1.64E-12 time=242.421
+After sweep 8 energy=-346.8194543887448  maxlinkdim=52 maxerr=1.47E-12 time=197.063
+After sweep 9 energy=-346.81945438874516  maxlinkdim=52 maxerr=1.50E-12 time=197.670
+After sweep 10 energy=-346.8194543887449  maxlinkdim=52 maxerr=1.48E-12 time=205.542
+After sweep 11 energy=-346.81945438874624  maxlinkdim=52 maxerr=1.47E-12 time=203.439
+Energy difference less than 1.0e-6, stopping DMRG
+code started. N=16
+g = 0.1
+index_g = 13
+After sweep 1 energy=-1399.2026453247922  maxlinkdim=52 maxerr=8.16E-08 time=278.958
+After sweep 2 energy=-1399.2026453654307  maxlinkdim=52 maxerr=6.41E-10 time=258.306
+After sweep 3 energy=-1399.202646504721  maxlinkdim=101 maxerr=1.00E-11 time=1137.264
+After sweep 4 energy=-1399.2026468141646  maxlinkdim=102 maxerr=9.99E-12 time=1332.541
+After sweep 5 energy=-1399.2026469590753  maxlinkdim=85 maxerr=9.95E-12 time=753.328
+After sweep 6 energy=-1399.2026469846196  maxlinkdim=52 maxerr=2.40E-12 time=253.933
+After sweep 7 energy=-1399.20264698463  maxlinkdim=52 maxerr=2.45E-14 time=210.338
+After sweep 8 energy=-1399.2026469846314  maxlinkdim=52 maxerr=6.17E-16 time=176.317
+After sweep 9 energy=-1399.2026469846307  maxlinkdim=52 maxerr=7.94E-16 time=172.250
+After sweep 10 energy=-1399.2026469846323  maxlinkdim=52 maxerr=2.57E-16 time=173.174
+After sweep 11 energy=-1399.202646984632  maxlinkdim=52 maxerr=6.18E-16 time=185.732
+Energy difference less than 1.0e-6, stopping DMRG
