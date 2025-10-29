@@ -211,7 +211,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
   sites[N-1] = siteind("charge_0_b",N-1) #lower right boundary
   sites[N] = siteind("charge_1",N) #upper right boundary
 
-  gs_file_path = "states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g+1)*".h5"
+  gs_file_path = "states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5"
   gs_file_path_gprev = "states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5"
 
   if isfile(gs_file_path)
@@ -327,7 +327,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
   if N <= N_C
 
     energy, psi = dmrg(H, psi_string; nsweeps, observer = MyObserver,noise = noise, maxdim, cutoff)
-    ff = h5open("states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5","w")
+    ff = h5open("states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5","w")
 
     write(ff,"sites",sites)
     println("Starting second DMRG")
@@ -340,7 +340,7 @@ function main(N::Int64,g::Float64,penalty::Float64,D_max::Int64)
 
 
     energy, psi = dmrg(H, psi_broken; nsweeps, observer = MyObserver,noise = noise, maxdim, cutoff)
-    ff = h5open("states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g)*".h5","w")
+    ff = h5open("states_dir/D3_ground_and_excited_"*string(N)*"_"*string(index_g-1)*".h5","w")
 
     write(ff,"sites",sites)
     println("Starting second DMRG")
